@@ -1,7 +1,6 @@
 # Python script to fetch and parse Swagger JSON from
 import requests
 
-
 def fetch_endpoints(swagger_url):
     response = requests.get(swagger_url)
     if response.status_code == 200:
@@ -12,7 +11,6 @@ def fetch_endpoints(swagger_url):
         raise Exception(
             f"Failed to fetch Swagger JSON: {response.status_code} - {response.text}"
         )
-
 
 if __name__ == "__main__":
     swagger_url = "http://petstore.swagger.io/v2/swagger.json"
